@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get("hello/{mes}", function ($mes) {
 
 $html = <<<EOF
 <html>
@@ -23,13 +24,12 @@ h1{font-size:100pt; text-align:right; color:#eee;
 </style>
 	<body>
 		<h1>Hello</h1>
-		<p>this is sample page.</p>
+		<p>{$mes}</p>
 		<p>これはサンプルで作ったページです</p>
 	</body>
 </html>
 EOF;
 
-Route::get("hello", function () use ($html) {
 	return $html;
 });
 
