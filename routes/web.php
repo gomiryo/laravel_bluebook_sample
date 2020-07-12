@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 // 第一引数：ルート情報
 // 第二引数：コントローラ名＠アクション名
-Route::get("hello", "HelloController@index");
-Route::get("hello/other", "HelloController@other");
+Route::get("hello", "HelloController");
+// Route::get("hello", "HelloController@index");
+// Route::get("hello/other", "HelloController@other");
 
 /*
 Route::get("hello/{mes?}", function ($mes = "no message") {

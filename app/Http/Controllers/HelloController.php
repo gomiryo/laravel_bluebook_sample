@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
+	function __invoke(){
+		return "single action controller";
+	}
+
+	/*
 	// アクションメソッドindexを追加
     public function index(){
 		return '<a href="/hello/other">other</a>';
@@ -13,4 +18,5 @@ class HelloController extends Controller
 	public function other(){
 		return "other.";
 	}
+	*/
 }
