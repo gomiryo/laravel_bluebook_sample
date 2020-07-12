@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 class HelloController extends Controller
 {
 	// アクションメソッドindexを追加
-    public function index($id = "noname", $pass = "unknown"){
-		return " id = {$id},  pass = {$pass} ";
+    public function index(){
+		return '<a href="/hello/other">other</a>';
+	}
+	public function other(){
+		return "other.";
 	}
 }
