@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-	function __invoke(){
-		return "single action controller";
+	function index(Request $request, Response $response) {
+		$str = "request = {$request}";
+		$str .="response = {$response}";
+		return $str;
 	}
 
 	/*
